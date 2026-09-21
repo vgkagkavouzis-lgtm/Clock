@@ -1,0 +1,97 @@
+
+
+/* if the specific input has the class of toggle then i want it to disappear */
+input[type="checkbox"].toggle {
+    opacity: 0;
+    position: absolute;
+    cursor: pointer;
+    top: -9000px;
+    left: -9000px;
+    /* it is still there, i can check/uncheck it */
+} 
+
+input[type="checkbox"].toggle + label {
+    display: flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    /* the before box scales as we change the size */
+}
+
+/* the background of the toggle   unchecked*/
+input[type="checkbox"].toggle + label::before {
+    content: "";
+    width: 2em;
+    height: 1em;
+    background-color: rgb(206, 192, 219);
+    border-radius: 1em;
+    margin-right: .25em;
+    transition: background-color 200ms ease-in-out;
+
+}
+
+
+/* checked */
+input[type="checkbox"].toggle:checked + label::before {
+    content: "";
+    width: 2em;
+    height: 1em;
+    background-color: blueviolet;
+    border-radius: 1em;
+    margin-right: .25em;
+}
+
+
+
+/* the switch unchecked*/
+input[type="checkbox"].toggle + label::after {
+    left: 0.1em;
+    content: "";
+    /* https://www.youtube.com/watch?v=N8BZvfRD_eU 15:00 about the symbol inside */
+    width: .8em;
+    height: .8em;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    border-radius: 1em;
+    transition: background-color 200ms ease-in-out, left 200ms ease-in-out;
+}
+
+
+/* checked */
+input[type="checkbox"].toggle:checked + label::after {
+    position: absolute;
+    left: 1.1em;
+    /* transform: translateX(100%);    another option to move the ball*/
+    content: "";
+    background-color: rgb(192, 160, 222);
+    border-radius: 1em;
+    margin-right: .25em;
+    transition: background-color 200ms ease-in-out, left 200ms ease-in-out;
+}
+
+/* input[type="checkbox"].toggle:focus + label::before {
+    outline: 1px solid blueviolet;
+}
+
+input[type="checkbox"].toggle:focus + label::after {
+    outline: 1px solid rgb(192, 160, 222);
+} */
+
+
+    /* the '+': get the label that comes directly afterwards
+':checked': whenever the checkbox is checked */
+input[type="checkbox"].toggle:checked + label {
+    color:blueviolet;
+}
+
+/* disabled */
+input[type="checkbox"].toggle:disabled + label
+{
+    /* fade the color */
+    color:rgb(90, 88, 88);
+}
+input[type="checkbox"].toggle:disabled + label::before
+{
+    /* fade the color */
+    color:rgb(90, 88, 88);
+}

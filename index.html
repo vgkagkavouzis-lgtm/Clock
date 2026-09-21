@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Clock</title>
+    <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+    <nav>
+        <div class="nav-group">
+            <label for="ham-nav" class="ham-nav">
+                <input type="checkbox" id="ham-nav">
+            </label>
+            <ul class="clock-controls">
+                <li><button data-mode="dg" class="btnNv dg nav" id="btn-dg">Digital</button></li>
+                <li><button data-mode="an" class="btnNv an nav" id="btn-an">Analog</button></li>
+                <li><button data-mode="both" class="btnNv both nav" id="btn-both">Both</button></li>
+            </ul>
+            <div class="search">
+                <input type="text" placeholder="City.." id="searchBar">
+                <label for="searchbar" id="searchLabel">
+                    <img src="./icons/magnifying-glass-solid.svg" id="searchIcon" alt="search icon">
+                </label>
+            </div>
+        </div>
+    </nav>
+    <section>
+        <div class="container-clock">
+            <div class="analog">
+                <div class="sec-hand" id="sec-hand"></div>
+                <div class="min-hand" id="min-hand"></div>
+                <div class="hour-hand" id="hour-hand"></div>
+            </div>
+            <div class="digital">
+                <div class="time">
+                    <h1><span id="dig-clock"></span></h1>
+                    <h3><span id="date">Date</span></h3>
+    
+                    <div class="check12h-container">
+                        <input type="checkbox" id="check12" class="toggle12h">
+                        <label for="check12">12h mode</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+    <script src="clock-function.js"></script>
+</body>
+</html>

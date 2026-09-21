@@ -1,0 +1,169 @@
+@import url(variables.css);
+@import url(navbar.css);
+
+body {
+    background-color: rgb(234, 225, 243);
+}
+.container-clock {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+/* Digital clock */
+.time {
+    width: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+/* analog clock */
+.analog {
+    border: 5px solid black  ;
+    border-radius: 50%;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    background-color: rgb(202, 171, 231);
+}
+
+.sec-hand {
+    position: absolute;
+    width: 5px;
+    height: 90px;
+    background-color: transparent;
+    left: 50%;
+    top: 10px;
+    transform-origin: bottom center;
+    border-radius: 5px;
+    margin-left: -2.5px;
+}
+
+
+.sec-hand::after {
+    content: '';
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    background-color: var(--foreground-color);
+    left: 50%;
+    top: 0px;
+    transform-origin: bottom center;
+    border-radius: 5px;
+    margin-left: -2.5px;
+    
+}
+
+.min-hand {
+    position: absolute;
+    width: 5px;
+    height: 70px;
+    background-color: var( --min-hand);
+    left: 50%;
+    top: 30px;
+    transform-origin: bottom center;
+    border-radius: 5px;
+    margin-left: -2.5px;
+    z-index: 1;
+
+}
+
+.hour-hand {
+    position: absolute;
+    width: 5px;
+    height: 50px;
+    background-color: rgb(213, 205, 221);
+    left: 50%;
+    top: 50px;
+    transform-origin: bottom center;
+    border-radius: 5px;
+    margin-left: -2.5px;
+    z-index: 2;
+
+}
+
+.hidden{
+    display: none;
+}
+
+
+/* toggle switch  pm, am*/
+
+.check12h-container {
+    margin-top: 15px;
+}
+
+input#check12.toggle12h {
+    opacity: 0;
+    left: -9000px;
+    top: -9000px;
+    position: absolute;
+}
+
+input#check12.toggle12h + label {
+    display: inline-flex;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+    /* padding-left: 2.5em; */
+}
+/* -----unchecked-------- */
+/* background */
+input#check12.toggle12h + label::before {
+    content: "";
+    /* position: absolute; */
+    left: 0;
+    top: 50%;
+    background-color: rgb(182, 133, 227);
+    height: 1em;
+    width: 2em;
+    margin-right: .5em;
+    border-radius: 1em;
+    transition: background-color 250ms ease-in-out;
+
+}
+
+/* the ball */
+input#check12.toggle12h + label::after {
+    content: "";
+    position: absolute;
+    background-color: rgb(234, 225, 243);
+    height: .8em;
+    width: .8em;
+    left: 0.1em;
+    margin-right: .5em;
+    border-radius: 1em;
+    transition: background-color 250ms ease-in-out, left 250ms ease-in;
+
+}
+
+
+/* -----checked------ */
+/* background */
+input#check12.toggle12h:checked + label::before {
+    content: "";
+    /* position: absolute; */
+    background-color: var(--foreground-color);
+    height: 1em;
+    width: 2em;
+    margin-right: .5em;
+    border-radius: 1em;
+    transition: background-color 250ms ease-in-out;
+}
+
+/* the ball */
+input#check12.toggle12h:checked + label::after {
+    content: "";
+    position: absolute;
+    background-color: rgb(199, 179, 218);
+    height: .8em;
+    width: .8em;
+    left: 1.1em;
+    margin-right: .5em;
+    border-radius: 1em;
+    transition: background-color 250ms ease-in-out, left 250ms ease-in;
+}
+
+

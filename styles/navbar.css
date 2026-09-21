@@ -1,0 +1,184 @@
+@import url(variables.css);
+@import url(style.css);
+
+
+/* Hamburger navbar icon - X icon*/
+input#ham-nav {
+    appearance: none;
+    position: absolute;
+    top: calc(var(--ham-slice-height) + var(--ham-gap));
+    margin: 0;
+}
+
+.ham-nav {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 1em;
+    width: var(--ham-width);
+    height: var(--ham-nav-height);
+    background-color: var(--background-color);
+    cursor: pointer;
+}
+
+input#ham-nav, .ham-nav::after,
+.ham-nav::before {
+    height: var(--ham-slice-height);
+    width: var(--ham-width);
+    background-color: var(--foreground-color);
+    border-radius: var(--border-radius);
+}
+
+.ham-nav::after,
+.ham-nav::before {
+    content: "";
+    position: absolute;
+
+}
+
+.ham-nav::after {
+    bottom: 0;
+    left: 0;
+}
+
+.ham-nav::before {
+    top: 0;
+    left: 0;
+}
+
+.ham-nav:has(input#ham-nav:checked) {
+    border:  var(--label-border);
+}
+
+.ham-nav:has(input#ham-nav:checked)::before {
+    /* move both bars to the middle and then rotate.  */
+    /* move down one slice + gap */
+    transform: translateY(calc(var(--ham-slice-height) + var(--ham-gap))) rotate(45deg);
+    
+}
+
+.ham-nav:has(input#ham-nav:checked)::after {
+    transform: translateY(calc(-1 * (var(--ham-slice-height) + var(--ham-gap)))) rotate(-45deg);
+}
+
+input#ham-nav:checked {
+    opacity: 0;
+}
+
+
+
+
+
+
+
+/* buttons, position checked / unchecked */
+nav > div > ul > li {
+    list-style: none;
+}
+
+.btnNv.nav {
+    border: none;
+    background-color: var(--background-color);
+    color: var(--foreground-color);
+    position: relative;
+    margin: .25em;
+    /* padding: 1em 1.5em ; */
+    width: 3em;
+    border-radius: .3em;
+    margin: 0.5em;
+    transition: transform 200ms ease-in-out;
+    cursor: pointer;
+}
+
+#btn-both {
+    width: 2.2em;
+}
+
+#btn-an {
+    width: 3.3em;
+}
+
+.btnNv::after {
+    position: absolute;
+    bottom: -0.1em;
+    left: 0;
+    content: '';
+    width: 100%;
+    height: .07em;
+    background-color: var(--foreground-color);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 200ms ease-in-out;
+}
+
+.nav-group:has(input#ham-nav:checked) .btnNv:hover::after {
+    transform: scaleX(1);
+}
+
+.btnNv:active {
+    transform: scale(0.9);
+}
+
+/* nav bar horizontal position */
+.nav-group {
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.clock-controls {
+    display: flex;
+    opacity: 0;
+    transition: opacity 100ms ease;
+}
+
+.nav-group:has(input#ham-nav:checked) ul.clock-controls {
+    opacity: 1;
+}
+
+.btnNv.nav, #searchBar {
+    font-size: var(--letter-fontSize);
+}
+
+
+/* search */
+.search {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    position: relative;
+    height: 2.5em;
+}
+
+
+#searchLabel {
+    position: absolute;
+    right: -0.65em;
+    top: 0;
+    width: 1.3em;
+    height: 2em;
+    margin-right: 2em;
+    margin-top: .6em;
+}
+
+
+#searchBar {
+    position: absolute;
+    width: 16em;
+    height: 2em;
+    margin-right: 1em;
+    padding-right: 1.8em;
+    border: 1px solid var(--min-hand);
+    border-radius: 30px;
+    background-color: var(--background-color);
+}
+
+/*#searchIcon {
+    width: 2em;
+    height: 2em;
+    margin: 0.4em;
+    font-size: 0.7em;
+}

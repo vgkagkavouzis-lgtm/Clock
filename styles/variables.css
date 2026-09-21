@@ -1,0 +1,22 @@
+*, *::after, *::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    
+    --transition: 300ms ease;
+    --letter-fontSize: 1em;
+    
+    /* colors */
+    --background-color:rgb(234, 225, 243);
+    --foreground-color: blueviolet;
+    /* blue violet shaded (dark to light); */
+    --min-hand: rgb(165, 118, 209);
+}
+
+.ham-nav, input#ham-nav {
+    --ham-width: 30px;
+    --ham-slice-height: 4px;
+    --ham-gap: 5px;
+    --ham-nav-height: calc(3 * var(--ham-slice-height) + 2 * var(--ham-gap));
+    --border-radius: 20px;
+}   
