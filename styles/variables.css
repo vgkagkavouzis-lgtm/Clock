@@ -14,9 +14,9 @@
 }
 
 .ham-nav, input#ham-nav {
-    --ham-width: 30px;
+    --ham-width: 40px;
     --ham-slice-height: 4px;
-    --ham-gap: 5px;
+    --ham-gap: 7px;
     --ham-nav-height: calc(3 * var(--ham-slice-height) + 2 * var(--ham-gap));
     --border-radius: 20px;
 }   

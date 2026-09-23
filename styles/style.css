@@ -3,7 +3,30 @@
 
 body {
     background-color: rgb(234, 225, 243);
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    
 }
+
+nav {
+    flex: 2;
+}
+
+.clocks {
+    flex: 6;
+}
+
+footer {
+    flex: 1;
+    display: flex;
+    align-items: flex-end;
+    margin: 1em;
+}
+
+
+
+
 .container-clock {
     display: flex;
     align-items: center;
@@ -166,4 +189,4 @@ input#check12.toggle12h:checked + label::after {
     transition: background-color 250ms ease-in-out, left 250ms ease-in;
 }
 
-
+/* ----foooter----- */
