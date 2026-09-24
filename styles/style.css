@@ -179,4 +179,4 @@ input#check12.toggle12h:checked + label::after {
     transition: background-color 250ms ease-in-out, left 250ms ease-in;
 }
 
-
+/* ----foooter----- */

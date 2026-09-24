@@ -150,8 +150,29 @@ searchForm.addEventListener('click', (e) => {
 
 
 
+// -----API-------
+// const timezones = 'https://api.timezones.in/v1/timezones'
 
+// async function getTimezone(targetUrl) {
+//     try {
+//         const response = await fetch(targetUrl);
+//         if (!response.ok) {
+//             throw new Error(`Server error: ${response.status}`);
+//         } else {
+//             const data = await response.json();
+//             const [{name, abbreviation, countryCode, countryName, mainCities}] = data;
+//             console.log(data);
 
+//             // ------see all the names------
+//             // data.forEach(({name, abbreviation, countryCode, countryName, mainCities}) => {
+//             //     console.log(name);
+//             // })          see all the names           
+//         }
+//     } catch (error) {
+//         console.log(`Fetch error: ${error}`);
+//     }
+// }
+// getTimezone(timezones);
 
 
 

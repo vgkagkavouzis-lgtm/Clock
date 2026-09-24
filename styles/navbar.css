@@ -82,7 +82,6 @@ nav > div > ul > li {
     color: var(--foreground-color);
     position: relative;
     margin: .25em;
-    /* padding: 1em 1.5em ; */
     width: 3em;
     border-radius: .3em;
     margin: 0.5em;
@@ -126,6 +125,7 @@ nav > div > ul > li {
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
+    height: 6em;
 }
 
 .clock-controls {
@@ -195,33 +195,57 @@ nav > div > ul > li {
 
 /* .search {
     width: 100%;
+    height: 100%;
+}
+
+.search {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    position: relative;
-    height: 2.5em;
+    /* position:relative; */
+    background-color: var(--background-color);
+    width: 100%;
+    height: 100%;
+    
 }
-
-
-#searchLabel {
-    position: absolute;
-    right: -0.65em;
-    top: 0;
-    width: 1.3em;
-    height: 2em;
-    margin-right: 2em;
-    margin-top: .6em;
-}
-
 
 #searchBar {
-    position: absolute;
-    width: 16em;
-    height: 2em;
-    margin-right: 1em;
-    padding-right: 1.8em;
-    border: 1px solid var(--min-hand);
+    position: relative;
+    height: 3em;
+    width: 3em;
+    margin-right: 1.5em;
+    border: 1px solid rgb(194, 170, 216);
     border-radius: 30px;
+    padding-right: 2em;
+    padding-left: 1em;
+    background-color: var(--background-color);
+    transition: width 200ms ease-in;
+}
+
+#searchBar.activeSInp {
+    position: relative;
+    height: 3em;
+    width: 16em;
+    margin-right: 1.5em;
+    border: 1px solid rgb(194, 170, 216);
+    border-radius: 30px;
+    padding-right: 2.8em;
+    padding-left: 1em;
+    background-color: var(--background-color);
+}
+
+#searchBar:focus {
+    outline: none;
+}
+
+
+#searchBtn {
+    background-image: url('/icons/magnifying-glass-solid.svg');
+    background-size: 60%;
+    position: absolute;
+    background-repeat: no-repeat;
+    background-position: center;
+    /* background-color: white; */
     background-color: var(--background-color);
 } */
 
