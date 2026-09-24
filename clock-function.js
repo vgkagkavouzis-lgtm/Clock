@@ -136,7 +136,17 @@ check12hContainer.addEventListener('change', (e) => {
 
 })
 
+// search
+const searchBar = document.getElementById('searchBar');
+const searchBtn = document.getElementById('searchIcon');
+const searchForm = document.querySelector('.search');
 
+searchForm.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (e.target.closest('#searchIcon')) {
+        searchBar.classList.toggle('activeBar');
+    }
+})
 
 
 

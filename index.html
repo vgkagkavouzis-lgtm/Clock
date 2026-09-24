@@ -17,12 +17,10 @@
                 <li><button data-mode="an" class="btnNv an nav" id="btn-an">Analog</button></li>
                 <li><button data-mode="both" class="btnNv both nav" id="btn-both">Both</button></li>
             </ul>
-            <div class="search">
-                <input type="text" placeholder="City.." id="searchBar">
-                <label for="searchbar" id="searchLabel">
-                    <img src="./icons/magnifying-glass-solid.svg" id="searchIcon" alt="search icon">
-                </label>
-            </div>
+            <form class="search">
+                <input type="text" placeholder="City.." class="" id="searchBar">
+                <button type="button" id="searchIcon"></button>
+            </form>
         </div>
     </nav>
     <section>
@@ -44,8 +42,14 @@
                 </div>
             </div>
         </div>
+        <div class="displayInfo">
+            <span></span>
+        </div>
 
     </section>
+    <footer>
+        <div class="footerDiv">V. Gkagkavouzis &#169;<span class="nameSpan"></span></div>
+    </footer>
     <script src="clock-function.js"></script>
 </body>
 </html>

@@ -144,7 +144,56 @@ nav > div > ul > li {
 
 
 /* search */
+
 .search {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    width: 100%;
+}
+
+#searchBar {
+    border-radius: 2em;
+    position: relative;
+    height: 3em;
+    width: 3em;
+    background-color: rgb(240, 237, 243);
+    border: none;
+    margin: 1em;
+    padding: 0 1em 0 1em;
+    box-shadow: 0px 0px 10px 1px rgba(0,0,0,0.5);
+    transition: width 200ms ease-in;
+
+}
+
+#searchBar.activeBar {
+    width: 16em;
+}
+
+#searchBar::placeholder {
+    color: rgb(197, 175, 218);
+}
+
+#searchIcon {
+    position: absolute;
+    background-image: url('/icons/magnifying-glass-solid.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 60%;
+    height: 2.7em;
+    width: 2.7em;
+    top: 1.6em;
+    right: 1.6em;
+    border: none;
+    border-radius: 2em;
+    background-color: rgb(240, 237, 243);
+    cursor: pointer;
+}
+
+
+
+/* .search {
     width: 100%;
     display: flex;
     justify-content: flex-end;
@@ -174,11 +223,5 @@ nav > div > ul > li {
     border: 1px solid var(--min-hand);
     border-radius: 30px;
     background-color: var(--background-color);
-}
+} */
 
-/*#searchIcon {
-    width: 2em;
-    height: 2em;
-    margin: 0.4em;
-    font-size: 0.7em;
-}
