@@ -17,11 +17,10 @@
                 <li><button data-mode="an" class="btnNv an nav" id="btn-an">Analog</button></li>
                 <li><button data-mode="both" class="btnNv both nav" id="btn-both">Both</button></li>
             </ul>
-            <form class="search" action="">
-                
-                        <input type="text" placeholder="City.." class="" id="searchBar">
-                        <button class="activeBtnSearch" id="searchBtn"></button>                
-            </form>  
+            <form class="search">
+                <input type="text" placeholder="City.." class="" id="searchBar">
+                <button type="button" id="searchIcon"></button>
+            </form>
         </div>
     </nav>
     <section class="clocks">
@@ -43,9 +42,14 @@
                 </div>
             </div>
         </div>
+        <div class="displayInfo">
+            <span></span>
+        </div>
 
     </section>
-    <footer>V.Gkagkavouzis &copy;<span id="fSpan"></span></footer>
-    <script src="clock-function.js" type="module"></script>
+    <footer>
+        <div class="footerDiv">V. Gkagkavouzis &#169;<span class="nameSpan"></span></div>
+    </footer>
+    <script src="clock-function.js"></script>
 </body>
 </html>

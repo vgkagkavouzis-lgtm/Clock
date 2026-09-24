@@ -136,25 +136,17 @@ check12hContainer.addEventListener('change', (e) => {
 
 })
 
-// ---navbar search btn-----
-// search btn
-const search = document.querySelector(".search");
+// search
 const searchBar = document.getElementById('searchBar');
+const searchBtn = document.getElementById('searchIcon');
+const searchForm = document.querySelector('.search');
 
-search.addEventListener('click', (e)=>{
-
-    if(e.target.closest('#searchBtn')) {
-        e.preventDefault(); // So that the form doesn't reload the page.
-        searchBar.classList.toggle('activeSInp');
-        searchBar.focus();
-};
+searchForm.addEventListener('click', (e) => {
+    e.preventDefault();
+    if (e.target.closest('#searchIcon')) {
+        searchBar.classList.toggle('activeBar');
+    }
 })
-
-// -------footer--------
-const footerMsg = document.getElementById('fSpan');
-
-footerMsg.innerHTML = `${new Date().getFullYear()}`
-
 
 
 
